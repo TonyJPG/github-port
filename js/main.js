@@ -55,5 +55,4 @@ $(document).ready(function () {
 //    $(document).click(function (event) {
 //        console.log(event.target);
 //    });
-//ongithub
 });
