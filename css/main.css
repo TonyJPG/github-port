@@ -1,6 +1,5 @@
 /*TODO in small screens the portafolio link in the burger get you 1px lower than it should*/
 /*TODO finish the gallery*/
-/*TODO underlined title in every section*/
 /*TODO apply color palette*/
 
 @import 'normalize.css';
@@ -85,7 +84,7 @@ nav.shrink{
 header{
   position: relative;
 	text-align:center;
-  z-index: 100;
+    z-index: 100;
 }
 
 .img-resp{
@@ -157,11 +156,10 @@ header .container{
 }
 
 /*every section: portafolio, perfil, contacto*/
-section{ /*z-index: 50;*/
+section{
   background-color: #b2dbbf;
   display:block;
   margin-top: -50px;
-  padding-top: 50px;
   position: relative;
 }
 .no-pad>[class*=col-]{
@@ -171,9 +169,10 @@ section{ /*z-index: 50;*/
 
 #perfil{/*display:block;*/
   color: #247ba0;
-  margin-bottom: 50px;
+  padding-bottom: 50px;
+  padding-top: 50px;
   text-align: center;
-  z-index: 40;
+  z-index: 80;
 }
 #perfil-h1{
 	font-family: 'Roboto', sans-serif;
@@ -205,8 +204,8 @@ section{ /*z-index: 50;*/
 
 #portafolio{
   background-color: #f3ffbd;
-  margin-top: 100px;
   padding-top: 100px;
+  z-index: 60;
 }
 #portafolio-h1{
   color: #ff1654;
@@ -222,14 +221,26 @@ section{ /*z-index: 50;*/
 }
 
 #contacto{
-  background-color: yellow;
 	display:block;
 	height: 500px;
-  z-index: 30;
+  padding-top: 100px;
+  z-index: 40;
+}
+#contacto-h1{
+  color: #247ba0;
+  margin-bottom: 60px;
+  padding-top: 25px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 4em;
+  font-weight: 900;
+  text-align: center;
+}
+#contacto-h1 span{
+  border-bottom: 10px solid #247ba0;
 }
 
 footer{
-  background-color: brown;
+  background-color: #f3ffbd;
   height: 500px;
 }
 
