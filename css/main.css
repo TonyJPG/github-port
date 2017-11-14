@@ -3,6 +3,7 @@
 /*TODO apply color palette*/
 
 @import 'normalize.css';
+@import 'booty.css';
 
 html{
   height: 100%;
