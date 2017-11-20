@@ -4,14 +4,12 @@ body{
   box-sizing: border-box;
   display: block;/*not sure*/
 }
-
 .container-fluid{
     margin-left: auto;
     margin-right: auto;
     padding-left: 15px;
     padding-right: 15px;
 }
-
 .container-fluid > .navbar-header,
 .container-fluid > .navbar-collapse {
     margin-left: -15px;
@@ -24,31 +22,22 @@ body{
         margin-right: 0;
     }
 }
-
 @media (min-width: 768px) {
     .navbar > .container-fluid .navbar-brand {
         margin-left: -15px;
     }
 }
-
 .container-fluid:before,
 .container-fluid:after{
     content: " ";
     display: table;
 }
-
 .navbar:after,
 .container-fluid:after{
     clear: both;
 }
-
 .navbar {
     min-height: 50px;
     margin-bottom: 20px;
     border: 1px solid transparent;
-}
-
-.navbar-inverse {
-    background-color: #222;
-    border-color: #080808;
 }

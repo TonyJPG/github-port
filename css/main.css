@@ -2,8 +2,8 @@
 /*TODO finish the gallery*/
 /*TODO apply color palette*/
 
-@import 'normalize.css';
-@import 'booty.css';
+@import 'normalize.css'; /*put with link on html*/
+/*@import 'booty.css';*/ /*trying to stop using bootstrap*/
 
 html{
   height: 100%;
@@ -11,6 +11,10 @@ html{
 body{
   height: 100%;
 	position: relative;
+}
+
+.navbar-fixed-top{
+  border-width: 0 !important;
 }
 
 /*a little less padding in the bar when the screen is small*/
@@ -27,24 +31,42 @@ a.navbar-brand{
   padding-right: 0;
 }
 
-/*navigation bar when the screen is medium*/
+/*for small screens*/
+.parallax{
+  background-attachment:scroll;
+  background-image: url(../images/extra/bg2.jpg);
+}
+
+/*when the screen is medium*/
 @media only screen and (min-width: 410px){
+  /*navigation bar*/
   a.navbar-brand{
     font-size: 20px;
   }
+  /*div.container when the screen is medium*/
+  header .container{
+    padding-bottom: 0;
+    padding-top:110px;
+  }
+  header.parallax{
+    background-attachment: fixed;
+    background-image: url(../images/extra/bg1.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 85%;
+  }
 }
 
-/*navigation bar when the screen is big*/
+/*when the screen is big*/
 @media only screen and (min-width: 768px){
+  /*navigation bar*/
   div.container-fluid{
     padding-left: 25px;
     padding-right: 25px;
   }
-  nav.navbar{
-    background-color: transparent;
-    border-bottom-color: transparent;
-  }
   a.navbar-brand{
+    color: #ff1654;
     font-size: 24px;
   }
   a.navbar-brand.shrink{
@@ -53,11 +75,28 @@ a.navbar-brand{
   #my-navbar{
     font-size: 18px;
   }
+  #my-navbar a{
+    color: #ff1654;
+  }
+  nav.navbar{
+    background-color: transparent;
+  }
+  .navbar-collapse.collapse{
+    border-top: 0 !important;
+  }
+  /*div.container when the screen is big*/
+  header .container{
+    padding-bottom: 0;
+    padding-top:150px;
+  }
+  .modal-content{
+    width: 80%;
+  }
 }
-/*chequear!*/
-.navbar-collapse{
-  border-top: 1px solid #f3ffbd !important;
-  box-shadow: none !important;
+
+.navbar-collapse.collapse{
+  border-top: 1px solid #f3ffbd;
+  /*box-shadow: none;*//*???*/
 }
 
 /*this happens when you scroll*/
@@ -71,7 +110,7 @@ nav.shrink{
 
 /*hamburger button*/
 .glyphicon{
-  color:#9d9d9d;
+  color: #9d9d9d;
 }
 
 /*this happens to the hamburger when the screen get too small*/
@@ -84,8 +123,8 @@ nav.shrink{
 /* intro: image + short bio*/
 header{
   position: relative;
-	text-align:center;
-    z-index: 100;
+	text-align: center;
+  z-index: 100;
 }
 
 .img-resp{
@@ -103,38 +142,7 @@ header img{
     margin:0 auto 22px;
     max-width: 90%;
   }
-}
-
-/*intro's div.container*/
-header .container{
-  padding-bottom: 10px;
-	padding-top:75px;
-}
-/*div.container when the screen is medium*/
-@media only screen and (min-width: 410px){
-  header .container{
-    padding-bottom: 0;
-    padding-top:110px;
-  }
-}
-/*div.container when the screen is big*/
-@media only screen and (min-width: 768px){
-  header .container{
-    padding-bottom: 0;
-    padding-top:150px;
-  }
-}
-#intro-text {
-  color:#f3ffbd;
-}
-
-#my-name{
-	font-family: 'Roboto', sans-serif;
-  font-size: 4em;
-	font-weight: 900;
-}
-/*my-name when the screen is small*/
-@media only screen and (max-width: 410px){
+  /*my-name when the screen is small*/
   #intro-text{
     line-height: 1.24;
   }
@@ -144,7 +152,29 @@ header .container{
   hr#intro-line{
     margin:10px auto 15px;
   }
+  /*perfil-h1 when the screen is small*/
+  #perfil-h1{
+    font-size: 3em;
+  }
 }
+
+/*intro's div.container*/
+header .container{
+  padding-bottom: 10px;
+	padding-top:75px;
+}
+
+
+#intro-text {
+  color:#f3ffbd;
+}
+
+#my-name{
+	font-family: 'Roboto', sans-serif;
+  font-size: 4em;
+	font-weight: 900;
+}
+
 #intro-line{
 	border:solid 4px;
   margin:25px auto 30px;
@@ -185,12 +215,8 @@ section{
 #perfil-h1 span{
   border-bottom: 10px solid #247ba0;
 }
-/*perfil-h1 when the screen is small*/
-@media only screen and (max-width: 410px){
-  #perfil-h1{
-    font-size: 3em;
-  }
-}
+
+
 .skills{
   background-color: #70c1b3;
   border-radius: 20px;
@@ -245,22 +271,7 @@ footer{
   height: 500px;
 }
 
-/*for small screens*/
-.parallax{
-  background-attachment:scroll;
-  background-image: url(../images/extra/bg2.jpg);
-}
-/*for big screens*/
-@media only screen and (min-width: 411px){
-  header.parallax{
-    background-attachment: fixed;
-    background-image: url(../images/extra/bg1.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 85%;
-  }
-}
+
 
 .port-cover{
   background-color: rgb(127,127,127);
@@ -347,9 +358,4 @@ footer{
   color: #9d9d9d;
   cursor: pointer;
   text-decoration: none;
-}
-@media only screen and (min-width: 768px){
-  .modal-content{
-    width: 80%;
-  }
 }
