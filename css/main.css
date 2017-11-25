@@ -1,6 +1,11 @@
 /*TODO in small screens the portafolio link in the burger get you 1px lower than it should*/
 /*TODO finish the gallery*/
 /*TODO apply color palette*/
+/*TODO redireccionar jpgtony.com*/
+/*TODO remove bootstrap*/
+/*TODO maquetar y desarrollar email*/
+/*TODO maquetar y migrar landings*/
+/*TODO maybe hamburger hover*/
 
 @import 'normalize.css'; /*put with link on html*/
 /*@import 'booty.css';*/ /*trying to stop using bootstrap*/
@@ -29,19 +34,65 @@ a.navbar-brand{
 	font-variant: small-caps;
   line-height: 18px;
   padding-right: 0;
+  color: #f3ffbd;
+}
+a.navbar-brand:hover{
+  color: #f3ffbd;
+  text-shadow: 0 0 2px #f3ffbd, 0 0 4px #f3ffbd;
 }
 
-/*for small screens*/
+/*for small screens(?)*/
 .parallax{
   background-attachment:scroll;
   background-image: url(../images/extra/bg2.jpg);
 }
 
-/*when the screen is medium*/
+/*menu buttons:hover*/
+ul.shrink>li>a{
+  color: #f3ffbd;
+}
+.nav>li>a:focus, .nav>li>a:hover{
+  color: #ff1654 !important;
+  background-color: #f3ffbd !important;
+}
+.navbar-collapse a{
+  color: #ff1654;
+}
+
+/*--------------------------for small screens-------------------------*/
+@media only screen and (max-width: 410px){
+  nav.navbar{
+    background-color: #ff1654;
+  }
+  header .img-resp{
+    margin:0 auto 22px;
+    max-width: 90%;
+  }
+  /*my-name when the screen is small*/
+  #intro-text{
+    line-height: 1.24;
+  }
+  #my-name{
+    font-size: 3em;
+  }
+  hr#intro-line{
+    margin:10px auto 15px;
+  }
+  /*perfil-h1 when the screen is small*/
+  #perfil-h1{
+    font-size: 3em;
+  }
+}
+
+/*----------------------when the screen is medium---------------------*/
 @media only screen and (min-width: 410px){
   /*navigation bar*/
+  nav.navbar{
+    background-color: #ff1654;
+  }
   a.navbar-brand{
     font-size: 20px;
+    color: #f3ffbd;
   }
   /*div.container when the screen is medium*/
   header .container{
@@ -58,7 +109,17 @@ a.navbar-brand{
   }
 }
 
-/*when the screen is big*/
+/*-----------------when the screen is small or medium----------------*/
+@media only screen and (max-width: 768px){
+  .navbar-collapse a{
+    color: #f3ffbd;
+  }
+  a.navbar-brand:hover{
+    text-shadow: 0 0 2px #f3ffbd, 0 0 4px #f3ffbd;
+  }
+}
+
+/*-----------------------when the screen is big----------------------*/
 @media only screen and (min-width: 768px){
   /*navigation bar*/
   div.container-fluid{
@@ -69,14 +130,19 @@ a.navbar-brand{
     color: #ff1654;
     font-size: 24px;
   }
+  a.navbar-brand:hover{
+    text-shadow: 0 0 2px #ff1654, 0 0 4px #ff1654;
+    color: #ff1654;
+  }
   a.navbar-brand.shrink{
+    color: #f3ffbd;
     font-size: 20px;
+  }
+  a.navbar-brand.shrink:hover{
+    text-shadow: 0 0 2px #f3ffbd, 0 0 4px #f3ffbd;
   }
   #my-navbar{
     font-size: 18px;
-  }
-  #my-navbar a{
-    color: #ff1654;
   }
   nav.navbar{
     background-color: transparent;
@@ -102,7 +168,7 @@ a.navbar-brand{
 /*this happens when you scroll*/
 nav.shrink{
   background-color: #ff1654;
-  opacity: 1;
+  opacity: 1;/*?*/
 }
 .shrink#my-navbar{
   font-size: 14px;
@@ -110,12 +176,11 @@ nav.shrink{
 
 /*hamburger button*/
 .glyphicon{
-  color: #9d9d9d;
+  color: #f3ffbd;
 }
-
 /*this happens to the hamburger when the screen get too small*/
 #overrides .navbar-toggle{
-  border-color: #777;
+  border-color: #f3ffbd;
   margin-bottom: 5px;
   margin-top: 5px;
 }
@@ -135,27 +200,6 @@ header{
 
 header img{
 	margin:0 auto 40px;
-}
-/*when the screen is small*/
-@media only screen and (max-width: 410px){
-  header .img-resp{
-    margin:0 auto 22px;
-    max-width: 90%;
-  }
-  /*my-name when the screen is small*/
-  #intro-text{
-    line-height: 1.24;
-  }
-  #my-name{
-    font-size: 3em;
-  }
-  hr#intro-line{
-    margin:10px auto 15px;
-  }
-  /*perfil-h1 when the screen is small*/
-  #perfil-h1{
-    font-size: 3em;
-  }
 }
 
 /*intro's div.container*/

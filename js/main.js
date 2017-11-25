@@ -29,6 +29,7 @@ $(document).ready(function () {
     $("nav").toggleClass("shrink", $(this).scrollTop() > 1, 250);
     $(".navbar-brand").toggleClass("shrink", $(this).scrollTop() > 1, 250);
     $("#my-navbar").toggleClass("shrink", $(this).scrollTop() > 1, 250);
+    $("ul.nav").toggleClass("shrink", $(this).scrollTop() > 1, 250);
   });
 
   //get the modal
