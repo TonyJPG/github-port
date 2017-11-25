@@ -6,6 +6,7 @@
 /*TODO maquetar y desarrollar email*/
 /*TODO maquetar y migrar landings*/
 /*TODO maybe hamburger hover*/
+/*TODO fix :focus*/
 
 @import 'normalize.css'; /*put with link on html*/
 /*@import 'booty.css';*/ /*trying to stop using bootstrap*/
@@ -57,6 +58,13 @@ ul.shrink>li>a{
 }
 .navbar-collapse a{
   color: #ff1654;
+}
+
+.navbar-nav > .active > a,
+.navbar-nav > .active > a:hover,
+.navbar-nav > .active > a:focus {
+  color: #ff1654;
+  background-color: #f3ffbd;
 }
 
 /*--------------------------for small screens-------------------------*/
