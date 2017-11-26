@@ -30,7 +30,7 @@ div.container-fluid{
 }
 
 /*web's logo*/
-a.navbar-brand{
+a.navbar-brand, a.navbar-brand:focus{
   font-size: 15px;
 	font-variant: small-caps;
   line-height: 18px;
@@ -98,7 +98,7 @@ ul.shrink>li>a{
   nav.navbar{
     background-color: #ff1654;
   }
-  a.navbar-brand{
+  a.navbar-brand, a.navbar-brand:focus{
     font-size: 20px;
     color: #f3ffbd;
   }
@@ -134,7 +134,7 @@ ul.shrink>li>a{
     padding-left: 25px;
     padding-right: 25px;
   }
-  a.navbar-brand{
+  a.navbar-brand, a.navbar-brand:focus{
     color: #ff1654;
     font-size: 24px;
   }
