@@ -16,8 +16,8 @@ $(document).ready(function () {
       // Using jQuery's animate() method to add smooth page scroll
       $("html, body").animate({
         scrollTop: $(hash).offset().top
-      }, 1200, "easeInOutCubic"); // Add hash (#) to URL when done scrolling (default click behavior) -> , function () {window.location.hash = hash;}
-    }
+      }, 1200, "easeInOutCubic", $(this).blur()); // Add hash (#) to URL when done scrolling (default click behavior) -> , function () {window.location.hash = hash;}
+    } // .blur() removes focus on buttons ;D
     // This hide dropdown menu when you click an option
     if ($(".in").length) {
       $(".in").removeClass("in");
