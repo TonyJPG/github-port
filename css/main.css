@@ -5,7 +5,8 @@
 /*TODO remove bootstrap*/
 /*TODO maquetar y desarrollar email*/
 /*TODO maquetar y migrar landings*/
-/*TODO maybe hamburger hover*/
+/*TODO color the hamburger when it's open*/
+/*TODO put roles everywhere and other accessibility stuff*/
 
 @import 'normalize.css'; /*put with link on html*/
 /*@import 'booty.css';*/ /*trying to stop using bootstrap*/
@@ -299,7 +300,7 @@ section{
 
 #contacto{
 	display:block;
-	height: 500px;
+  padding-bottom: 50px;
   padding-top: 100px;
   z-index: 40;
 }
