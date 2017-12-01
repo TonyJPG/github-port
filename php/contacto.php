@@ -1,4 +1,5 @@
-<?php
+  <?php
+  /*version 1*/
   $from = 'Antonio Perez <jpgtony@gmail.com>';
   $sendTo = 'Antonio Perez <jpgtony@gmail.com>';
   $subject = 'Contact form from your website!';
