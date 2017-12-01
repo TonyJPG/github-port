@@ -30,7 +30,7 @@ $(function() {
         }
       })
       console.log("retorné falso");
-      //return false; what's this for?
+      return false;
     }
   })
 });
