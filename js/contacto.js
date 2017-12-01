@@ -4,6 +4,7 @@ $(function() {
 
   $('#contact-form').on('submit', function(e) {
     if (!e.isDefaultPrevented()) {
+      console.log("entre al if1");
       var url = 'php/contacto.php';
 
       $.ajax({
@@ -11,17 +12,20 @@ $(function() {
         url: url,
         data: $(this).serialize(),
         success: function (data) {
+          console.log("entre al ajax.data");
           var messageAlert = 'alert-' + data.type;
           var messageText = data.message;
 
           var alertBox = '<div class="alert ' + messageAlert + ' alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>' + messageText + '</div>';
 
           if (messageAlert && messageText) {
+            console.log("entre al if2");
             $('#contact-form').find('.messages').html(alertBox);
             $('#contact-form')[0].reset();
           }
         }
       })
+      console.log("retorné falso");
       return false;
     }
   })

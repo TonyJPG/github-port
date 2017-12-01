@@ -2,7 +2,7 @@
   /*version 1*/
   $from = 'Antonio Perez <jpgtony@gmail.com>';
   $sendTo = 'Antonio Perez <jpgtony@gmail.com>';
-  $subject = 'Contact form from your website!';
+  $subject = 'TE ESCRIBEN DESDE TU PAGINA WEB!';
   $fields = array('name' => 'Nombre', 'surname' => 'Apellido', 'email' => 'Email', 'phone' => 'Telefono', 'message' => 'Mensaje');
   $okMessage = 'Contact form successfully submitted. Thank you, I will get back to you soon!';
   $errorMessage = 'There was an error while submitting the form. Please try again later';
@@ -13,7 +13,7 @@
 
     if(count($_POST) == 0) throw new \Exception("Form is empty");
 
-    $emailText = "You have a new message from your contact form\n=============================\n\n";
+    $emailText = "Alguien llenó el formulario de tu web!!\nPuso lo siguiente:\n=============\n\n";
 
     foreach ($_POST as $key => $value) {
       if (isset($fields[$key])) {
