@@ -8,7 +8,7 @@ $(function() {
       var url = 'php/contacto.php';
 
       $.ajax({
-        type: 'POST',
+        type: "POST",
         url: url,
         data: $(this).serialize(),
         success: function (data) {
@@ -30,7 +30,7 @@ $(function() {
         }
       })
       console.log("retorné falso");
-      return false;
+      return false; //this return fix the double email and stuff
     }
   })
 });
