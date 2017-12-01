@@ -15,9 +15,11 @@ $(function() {
           console.log("entre al ajax.data");
           var messageAlert = 'alert-' + data.type;
           var messageText = data.message;
+          console.log(messageAlert);
+          console.log(messageText);
 
           var alertBox = '<div class="alert ' + messageAlert + ' alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>' + messageText + '</div>';
-
+          console.log(alertBox);
           if (messageAlert && messageText) {
             console.log("entre al if2");
             $('#contact-form').find('.messages').html(alertBox);
@@ -28,7 +30,7 @@ $(function() {
         }
       })
       console.log("retorné falso");
-      return false;
+      //return false; what's this for?
     }
   })
 });
