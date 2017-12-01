@@ -11,7 +11,8 @@ $(function() {
         type: "POST",
         url: url,
         data: $(this).serialize(),
-        success: function (data) {
+        success: function (data)
+        {
           console.log("entre al ajax.data");
           var messageAlert = 'alert-' + data.type;
           var messageText = data.message;
