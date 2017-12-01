@@ -13,11 +13,11 @@
 
     if(count($_POST) == 0) throw new \Exception("Form is empty");
 
-    $emailText = "You have a new message from your contact form\n=============================\n";
+    $emailText = "You have a new message from your contact form\n=============================\n\n";
 
     foreach ($_POST as $key => $value) {
       if (isset($fields[$key])) {
-        $emailText .= '$fields[$keys]: $value\n';
+        $emailText .= "$fields[$keys]: $value\n";
       }
     }
 
@@ -27,7 +27,7 @@
                       'Return-Path: ' . $from,
     );
 
-    mail($sendTo, $subject, $emailText, implode('\n', $headers));
+    mail($sendTo, $subject, $emailText, implode("\n", $headers));
 
     $responseArray = array('type' => 'success', 'message' => $okMessage);
 
