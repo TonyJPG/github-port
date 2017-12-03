@@ -1,4 +1,4 @@
-/*version 1*/
+/*version 2*/
 /*TODO in small screens the portafolio link in the burger get you 1px lower than it should*/
 /*TODO finish the gallery*/
 /*TODO apply color palette*/
@@ -8,6 +8,7 @@
 /*TODO maquetar y migrar landings*/
 /*TODO color the hamburger when it's open*/
 /*TODO put roles everywhere and other accessibility stuff*/
+/*TODO titulos deben reducirse en screen pequeñas*/
 
 html{
   height: 100%;
@@ -192,6 +193,7 @@ nav.shrink{
 
 /* intro: image + short bio*/
 header{
+  padding-bottom: 50px;
   position: relative;
 	text-align: center;
   z-index: 100;
@@ -410,7 +412,7 @@ footer{
 .text-muted{
   display: inline-block;
   vertical-align: text-top;
-  margin: 0 0 0 10px;
+  margin: 0;
 }
 label{
   text-transform: uppercase;

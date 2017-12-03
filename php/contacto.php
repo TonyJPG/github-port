@@ -1,5 +1,5 @@
 <?php
-  /*version 1*/
+  /*version 2*/
   namespace contacto_portafolio;
   use PHPMailer\PHPMailer\PHPMailer;
   require 'PHPMailer-master/src/PHPMailer.php';

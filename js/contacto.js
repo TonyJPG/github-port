@@ -1,4 +1,4 @@
-/*version 1*/
+/*version 2*/
 $(function() {
   $('#contact-form').validator();
   $('#contact-form').on('submit', function(e) {

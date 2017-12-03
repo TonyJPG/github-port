@@ -1,4 +1,4 @@
-/*version 1*/
+/*version 2*/
 /*global $, document, window, console*/
 $(document).ready(function () {
   "use strict";
