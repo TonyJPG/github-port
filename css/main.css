@@ -9,9 +9,6 @@
 /*TODO color the hamburger when it's open*/
 /*TODO put roles everywhere and other accessibility stuff*/
 
-@import 'normalize.css'; /*put with link on html*/
-/*@import 'booty.css';*/ /*trying to stop using bootstrap*/
-
 html{
   height: 100%;
 }
@@ -31,7 +28,7 @@ div.container-fluid{
 }
 
 /*web's logo*/
-a.navbar-brand{ /*a.navbar-brand:focus*/
+a.navbar-brand{
   font-size: 15px;
 	font-variant: small-caps;
   line-height: 18px;
@@ -53,7 +50,7 @@ a.navbar-brand:hover{
 ul.shrink>li>a{
   color: #f3ffbd;
 }
-.nav>li>a:hover{ /*.nav>li>a:focus*/
+.nav>li>a:hover{
   color: #ff1654 !important;
   background-color: #f3ffbd !important;
 }
@@ -62,7 +59,7 @@ ul.shrink>li>a{
 }
 
 .navbar-nav > .active > a,
-.navbar-nav > .active > a:hover{ /*.navbar-nav > .active > a:focus */
+.navbar-nav > .active > a:hover{
   color: #ff1654;
   background-color: #f3ffbd;
 }
@@ -98,7 +95,7 @@ ul.shrink>li>a{
   nav.navbar{
     background-color: #ff1654;
   }
-  a.navbar-brand{ /*a.navbar-brand:focus*/
+  a.navbar-brand{
     font-size: 20px;
     color: #f3ffbd;
   }
@@ -134,7 +131,7 @@ ul.shrink>li>a{
     padding-left: 25px;
     padding-right: 25px;
   }
-  a.navbar-brand{ /*a.navbar-brand:focus*/
+  a.navbar-brand{
     color: #ff1654;
     font-size: 24px;
   }
@@ -405,8 +402,16 @@ footer{
   top: 0;
   transition: 0.3s;
 }
-.close-modal:hover{ /*.close-modal:focus*/
+.close-modal:hover{
   color: #9d9d9d;
   cursor: pointer;
   text-decoration: none;
+}
+.text-muted{
+  display: inline-block;
+  vertical-align: text-top;
+  margin: 0 0 0 10px;
+}
+label{
+  text-transform: uppercase;
 }
