@@ -232,10 +232,46 @@
 		</section> <!-- contacto -->
 
 
-		<footer></footer>
+		<footer class="container-fluid">
+			<div class="row">
+				<div class="col-md-6 col-sm-12" id="gmap">
+					<h3><b>ESTOY POR ACÁ <i class="fa fa-hand-o-down" aria-hidden="true"></i></b></h3>
+					<div id="map"></div>
+				</div> <!-- gmap -->
+
+				<div class="col-md-6 col-sm-12" id="redes">
+					<h3><b>Y TAMBIÉN POR ACÁ <i class="fa fa-hand-o-down" aria-hidden="true"></i></b></h3>
+					<ul class="red-container">
+
+						<li class="red">
+							<a class="btn" href="#">
+                  <i class="fa fa-github fa-4x" aria-hidden="true"></i>
+									<h4>GITHUB</h4>
+              </a>
+						</li>
+
+						<li class="red">
+							<a class="btn" href="#">
+                  <i class="fa fa-codepen fa-4x" aria-hidden="true"></i>
+									<h4>CODEPEN</h4>
+              </a>
+						</li>
+						<li class="red">
+							<a class="btn" href="#">
+                  <i class="fa fa-envelope-o fa-4x" aria-hidden="true"></i>
+									<h4>EMAIL</h4>
+              </a>
+						</li>
+					</ul>
+				</div> <!-- redes -->
+			</div> <!-- row -->
+			<h6 id="credit">CODED BY ANTONIO PÉREZ.</h6>
+		</footer>
 
 
 		<div id="boton-subir"></div>
+
+
 		<div id="my-modal" class="modal">
       <span class="close-modal">&times;</span>
       <img class="modal-content" id="modal-image">
@@ -243,11 +279,22 @@
     </div> <!-- my-modal -->
 
 
+		<script>
+			//google map script
+		  function initMap() {
+		    var map = new google.maps.Map(document.getElementById('map'), {
+		      zoom: 14,
+		      center: {lat: 40.414, lng: -3.675},
+		      mapTypeId: google.maps.MapTypeId.ROADMAP
+		    })
+		  }
+		</script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
 		<script src="https://www.atlasestateagents.co.uk/javascript/tether.min.js"></script>
 		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.9/validator.min.js"></script>
+		<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBTZntXnukC2gBB6Jl1Ovzpi9VaLIEsiMk&callback=initMap"></script>
 		<script src="js/main.js"></script>
 		<script src="js/contacto.js"></script>
 	</body>

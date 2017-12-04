@@ -2,13 +2,14 @@
 /*TODO in small screens the portafolio link in the burger get you 1px lower than it should*/
 /*TODO finish the gallery*/
 /*TODO apply color palette*/
-/*TODO redireccionar jpgtony.com*/
 /*TODO remove bootstrap*/
 /*TODO maquetar y desarrollar email*/
 /*TODO maquetar y migrar landings*/
 /*TODO color the hamburger when it's open*/
 /*TODO put roles everywhere and other accessibility stuff*/
 /*TODO titulos deben reducirse en screen pequeñas*/
+/*TODO form security*/
+/*TODO mejorar footer*/
 
 html{
   height: 100%;
@@ -249,6 +250,8 @@ section{
   padding-right:0;
 }
 
+
+
 #perfil{/*display:block;*/
   color: #247ba0;
   padding-bottom: 50px;
@@ -267,7 +270,6 @@ section{
   border-bottom: 10px solid #247ba0;
 }
 
-
 .skills{
   background-color: #70c1b3;
   border-radius: 20px;
@@ -279,6 +281,8 @@ section{
   padding-right: 30px;
   text-align: center;
 }
+
+
 
 #portafolio{
   background-color: #f3ffbd;
@@ -298,11 +302,11 @@ section{
   border-bottom: 10px solid #ff1654;
 }
 
+
+
 #contacto{
-	display:block;
   padding-bottom: 50px;
   padding-top: 100px;
-  z-index: 40;
 }
 #contacto-h1{
   color: #247ba0;
@@ -317,9 +321,43 @@ section{
   border-bottom: 10px solid #247ba0;
 }
 
+
+
 footer{
-  background-color: #f3ffbd;
-  height: 500px;
+  background-color: #222;
+  padding-top: 80px;
+  z-index: 20;
+}
+footer h3{
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-top: 30px;
+}
+#redes, #gmap{
+  color: #f3ffbd;
+  text-align: center;
+}
+.red{
+  display: inline-block;
+  margin: 10px;
+}
+.red a{
+  color: #f3ffbd;
+}
+.red-container{
+  list-style: none;
+  padding: 0;
+}
+#map{
+  height: 350px;
+  border-radius: 4px;
+  margin-top: 30px;
+}
+#credit{
+  color: #666;
+  text-align: center;
+  height: 50px;
+  line-height: 88px;
 }
 
 
