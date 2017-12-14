@@ -7,9 +7,9 @@
 /*TODO maquetar y migrar landings*/
 /*TODO color the hamburger when it's open*/
 /*TODO put roles everywhere and other accessibility stuff*/
-/*TODO titulos deben reducirse en screen pequeñas*/
 /*TODO form security*/
 /*TODO mejorar footer*/
+/*TODO boton de subir*/
 
 html{
   height: 100%;
@@ -53,23 +53,23 @@ ul.shrink>li>a{
   color: #f3ffbd;
 }
 .nav>li>a:hover{
-  color: #ff1654 !important;
+  color: #5F4B8B !important;
   background-color: #f3ffbd !important;
 }
 .navbar-collapse a{
-  color: #ff1654;
+  color: #5F4B8B;
 }
 
 .navbar-nav > .active > a,
 .navbar-nav > .active > a:hover{
-  color: #ff1654;
+  color: #5F4B8B;
   background-color: #f3ffbd;
 }
 
 /*--------------------------for small screens-------------------------*/
 @media only screen and (max-width: 410px){
   nav.navbar{
-    background-color: #ff1654;
+    background-color: #5F4B8B;
   }
   header .img-resp{
     margin:0 auto 22px;
@@ -85,9 +85,19 @@ ul.shrink>li>a{
   hr#intro-line{
     margin:10px auto 15px;
   }
-  /*perfil-h1 when the screen is small*/
-  #perfil-h1{
+  /*when the screen is small*/
+  div#perfil-h1, div#portafolio-h1, div#contacto-h1{
     font-size: 3em;
+  }
+}
+
+/*-----------------when the screen is small or medium----------------*/
+@media only screen and (max-width: 768px){
+  .navbar-collapse a{
+    color: #f3ffbd;
+  }
+  a.navbar-brand:hover{
+    text-shadow: 0 0 2px #f3ffbd, 0 0 4px #f3ffbd;
   }
 }
 
@@ -95,7 +105,7 @@ ul.shrink>li>a{
 @media only screen and (min-width: 410px){
   /*navigation bar*/
   nav.navbar{
-    background-color: #ff1654;
+    background-color: #5F4B8B;
   }
   a.navbar-brand{
     font-size: 20px;
@@ -116,16 +126,6 @@ ul.shrink>li>a{
   }
 }
 
-/*-----------------when the screen is small or medium----------------*/
-@media only screen and (max-width: 768px){
-  .navbar-collapse a{
-    color: #f3ffbd;
-  }
-  a.navbar-brand:hover{
-    text-shadow: 0 0 2px #f3ffbd, 0 0 4px #f3ffbd;
-  }
-}
-
 /*-----------------------when the screen is big----------------------*/
 @media only screen and (min-width: 768px){
   /*navigation bar*/
@@ -134,12 +134,12 @@ ul.shrink>li>a{
     padding-right: 25px;
   }
   a.navbar-brand{
-    color: #ff1654;
+    color: #5F4B8B;
     font-size: 24px;
   }
   a.navbar-brand:hover{
-    text-shadow: 0 0 2px #ff1654, 0 0 4px #ff1654;
-    color: #ff1654;
+    text-shadow: 0 0 2px #5F4B8B, 0 0 4px #5F4B8B;
+    color: #5F4B8B;
   }
   a.navbar-brand.shrink{
     color: #f3ffbd;
@@ -174,7 +174,7 @@ ul.shrink>li>a{
 
 /*this happens when you scroll*/
 nav.shrink{
-  background-color: #ff1654;
+  background-color: #5F4B8B;
   opacity: 1;/*?*/
 }
 .shrink#my-navbar{
@@ -290,7 +290,7 @@ section{
   z-index: 60;
 }
 #portafolio-h1{
-  color: #ff1654;
+  color: #5F4B8B;
   margin-bottom: 60px;
   padding-top: 25px;
   font-family: 'Roboto', sans-serif;
@@ -299,7 +299,7 @@ section{
   text-align: center;
 }
 #portafolio-h1 span{
-  border-bottom: 10px solid #ff1654;
+  border-bottom: 10px solid #5F4B8B;
 }
 
 
@@ -319,6 +319,10 @@ section{
 }
 #contacto-h1 span{
   border-bottom: 10px solid #247ba0;
+}
+form{
+  padding-left: 40px;
+  padding-right: 40px;
 }
 
 
