@@ -26,7 +26,8 @@
 
     foreach ($_POST as $key => $value) {
       if (isset($fields[$key])) {
-        $emailTextHtml .= "<tr><th>$fields[$key]</th><td>$value</td></tr>";
+        $value = htmlspecialchars($value, ENT_QUOTES);
+        $emailTextHtml .= "<tr><th align="left">$fields[$key]</th><td>$value</td></tr>";
       }
     }
     $emailTextHtml .= "</table><hr>";
