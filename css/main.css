@@ -87,6 +87,10 @@ ul.shrink>li>a{
   div#perfil-h1, div#portafolio-h1, div#contacto-h1{
     font-size: 3em;
   }
+  #contact-form{
+    padding-left: 40px;
+    padding-right: 40px;
+  }
 }/*media query*/
 
 /*-----------------when the screen is small or medium----------------*/
@@ -176,6 +180,13 @@ ul.shrink>li>a{
   }
 } /*media query*/
 
+/*-----------------------when the screen is bigger-------------------*/
+@media only screen and (max-width: 991px){
+  form{
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+}
 
 .navbar-collapse.collapse{
   border-top: 1px solid #f3ffbd;
@@ -334,11 +345,9 @@ section{
 #contacto-h1 span{
   border-bottom: 10px solid #247ba0;
 }
-form{
-  padding-left: 40px;
-  padding-right: 40px;
-}
 
+
+/* form */
 
 
 footer{
