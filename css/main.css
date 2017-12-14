@@ -5,11 +5,9 @@
 /*TODO remove bootstrap*/
 /*TODO maquetar y desarrollar email*/
 /*TODO maquetar y migrar landings*/
-/*TODO color the hamburger when it's open*/
 /*TODO put roles everywhere and other accessibility stuff*/
 /*TODO form security*/
-/*TODO mejorar footer*/
-/*TODO boton de subir*/
+/*TODO terminar de linkear redes*/
 
 html{
   height: 100%;
@@ -89,7 +87,7 @@ ul.shrink>li>a{
   div#perfil-h1, div#portafolio-h1, div#contacto-h1{
     font-size: 3em;
   }
-}
+}/*media query*/
 
 /*-----------------when the screen is small or medium----------------*/
 @media only screen and (max-width: 768px){
@@ -99,7 +97,11 @@ ul.shrink>li>a{
   a.navbar-brand:hover{
     text-shadow: 0 0 2px #f3ffbd, 0 0 4px #f3ffbd;
   }
-}
+  #gmap{
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}/*media query*/
 
 /*----------------------when the screen is medium---------------------*/
 @media only screen and (min-width: 410px){
@@ -124,7 +126,11 @@ ul.shrink>li>a{
     background-size: cover;
     height: 85%;
   }
-}
+  #gmap{
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}/*media query*/
 
 /*-----------------------when the screen is big----------------------*/
 @media only screen and (min-width: 768px){
@@ -165,7 +171,11 @@ ul.shrink>li>a{
   .modal-content{
     width: 80%;
   }
-}
+  #boton-subir{
+    display: none;
+  }
+} /*media query*/
+
 
 .navbar-collapse.collapse{
   border-top: 1px solid #f3ffbd;
@@ -190,6 +200,10 @@ nav.shrink{
   border-color: #f3ffbd;
   margin-bottom: 5px;
   margin-top: 5px;
+}
+#overrides .navbar-toggle:hover,
+#overrides .navbar-toggle:focus{
+  background-color: red;
 }
 
 /* intro: image + short bio*/
@@ -329,7 +343,7 @@ form{
 
 footer{
   background-color: #222;
-  padding-top: 80px;
+  padding-top: 50px;
   z-index: 20;
 }
 footer h3{
@@ -340,6 +354,14 @@ footer h3{
 #redes, #gmap{
   color: #f3ffbd;
   text-align: center;
+}
+#redes{
+  padding-top: 40px;
+}
+@media only screen and (min-width: 992px) {
+  #redes{
+    padding-top: 0;
+  }
 }
 .red{
   display: inline-block;
@@ -363,7 +385,6 @@ footer h3{
   height: 50px;
   line-height: 88px;
 }
-
 
 
 .port-cover{
@@ -437,7 +458,7 @@ footer h3{
 }
 
 .close-modal{
-  color: #fff;
+  color: #f3ffbd;
   font-size: 40px;
   font-weight: bold;
   position: absolute;
@@ -457,4 +478,24 @@ footer h3{
 }
 label{
   text-transform: uppercase;
+}
+
+
+#boton-subir{
+  background-color: #5F4B8B;
+  border-radius: 50%;
+  bottom: 35px;
+  box-shadow: 1px 2px 4px black;
+  cursor: pointer;
+  height: 50px;
+  line-height: 48px;
+  opacity: 0.8;
+  position: fixed;
+  right: 25px;
+  text-align: center;
+  width: 50px;
+  z-index: 120;
+}
+#boton-subir a{
+  color: #f3ffbd;
 }

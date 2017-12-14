@@ -10,6 +10,14 @@ function initMap() {
   })
 }
 
+//function to close dropdown menu when it's open
+function closeTheMenu() {
+  if ($(".in").length) {
+    $(".in").removeClass("in");
+  }
+}
+
+
 $(document).ready(function () {
   "use strict";
 
@@ -29,10 +37,10 @@ $(document).ready(function () {
         scrollTop: $(hash).offset().top
       }, 1200, "easeInOutCubic", $(this).blur()); // Add hash (#) to URL when done scrolling (default click behavior) -> , function () {window.location.hash = hash;}
     } // .blur() removes focus on buttons ;D
+
     // This hide dropdown menu when you click an option
-    if ($(".in").length) {
-      $(".in").removeClass("in");
-    }
+    closeTheMenu();
+
   });
 
   //this modify the navbar when you scroll away from the top
@@ -62,6 +70,15 @@ $(document).ready(function () {
     modal.style.display = "none";
     $("body").removeClass("modal-open"); //this stop scroll when looking at a project
   };
+
+
+  //button to scroll up code
+  $('#boton-subir').click(function(event) {
+    event.preventDefault();
+    closeTheMenu();
+    $("html, body").animate({scrollTop: 0}, 1200, "easeInOutCubic", $(this).blur());
+  });
+
 
     //This shows what element did I click - devtool
 //    $(document).click(function (event) {
