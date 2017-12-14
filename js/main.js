@@ -1,5 +1,15 @@
 /*version 2*/
 /*global $, document, window, console*/
+
+//google map script
+function initMap() {
+  var map = new google.maps.Map(document.getElementById('map'), {
+    zoom: 14,
+    center: {lat: 40.414, lng: -3.675},
+    mapTypeId: google.maps.MapTypeId.ROADMAP
+  })
+}
+
 $(document).ready(function () {
   "use strict";
 
