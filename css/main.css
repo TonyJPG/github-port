@@ -397,7 +397,6 @@ footer h3{
   line-height: 88px;
 }
 
-
 .port-cover{
   background-color: rgb(127,127,127);
   background-color: rgba(127,127,127,.5);
@@ -410,6 +409,7 @@ footer h3{
   width: 100%;
   z-index: 2;
 }
+
 .port-cover span{
   color: #F7FFF7;
   margin-top: -34px;
