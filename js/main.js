@@ -61,7 +61,7 @@ $(document).ready(function () {
   $(".port-cover").click(function () { //click the invisible cover
     modal.style.display = "block";
     modalImg.src = $(this).next().data("url"); //use the sibling attributes
-    captionText.innerHTML = $(this).next()[0].alt;
+    captionText.innerHTML = $(this).next().data("desc");
     $("body").addClass("modal-open"); //this stop scroll when looking at a project
   });
 
