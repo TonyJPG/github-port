@@ -1,4 +1,4 @@
-/*version 2*/
+/*version 3*/
 /*global $, document, window, console*/
 
 //google map script
@@ -51,28 +51,30 @@ $(document).ready(function () {
     $("ul.nav").toggleClass("shrink", $(this).scrollTop() > 1, 250);
   });
 
-  //get the modal
-  var modal = document.getElementById("my-modal"),
-      modalImg = document.getElementsByClassName("modal-content")[0],
-      captionText = document.getElementById("caption"),
-      span = document.getElementsByClassName("close-modal")[0];
 
-  //when click on the gallery's images
-  $(".port-cover").click(function () { //click the invisible cover
-    if ($(this).hasClass("is-video")){
-      //DOING THIS!!
-    } else {
-      modal.style.display = "block";
-      modalImg.src = $(this).next().data("url"); //use the sibling attributes
-      captionText.innerHTML = $(this).next().data("desc");
-      $("body").addClass("modal-open"); //this stop scroll when looking at a project
+  //NEW modal functionality (video added)
+  var modal = document.getElementsByClassName("modal")[0], //modal container
+      span = document.getElementsByClassName("close-modal")[0]; //exit X
+  //when you click a gallery's elem
+  $(".port-cover").click(function(){
+    if ($(this).hasClass("is-video")){ //if elem is video
+      $(".modal").append("<video class='modal-content' controls><source type='video/mp4'>Video not working.</video>");
+    } else { //if elem is image
+      $(".modal").append("<img class='modal-content'>");
     }
+    $(".modal").append("<div id='caption'></div>");
+    modal.style.display = "block";
+    document.getElementsByClassName("modal-content")[0].src = $(this).next().data("url"); //use the sibling attributes
+    document.getElementById("caption").innerHTML = $(this).next().data("desc");
+    $("body").addClass("modal-open"); //this stop scroll when looking at a project
   });
 
   //when clicks on X, close the modal
   span.onclick = function () {
     modal.style.display = "none";
     $("body").removeClass("modal-open"); //this stop scroll when looking at a project
+    $(".modal-content").remove();
+    $("#caption").remove();
   };
 
 
