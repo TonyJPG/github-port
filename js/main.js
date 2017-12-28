@@ -53,16 +53,20 @@ $(document).ready(function () {
 
   //get the modal
   var modal = document.getElementById("my-modal"),
-      modalImg = document.getElementById("modal-image"),
+      modalImg = document.getElementsByClassName("modal-content")[0],
       captionText = document.getElementById("caption"),
       span = document.getElementsByClassName("close-modal")[0];
 
   //when click on the gallery's images
   $(".port-cover").click(function () { //click the invisible cover
-    modal.style.display = "block";
-    modalImg.src = $(this).next().data("url"); //use the sibling attributes
-    captionText.innerHTML = $(this).next().data("desc");
-    $("body").addClass("modal-open"); //this stop scroll when looking at a project
+    if ($(this).hasClass("is-video")){
+      //DOING THIS!!
+    } else {
+      modal.style.display = "block";
+      modalImg.src = $(this).next().data("url"); //use the sibling attributes
+      captionText.innerHTML = $(this).next().data("desc");
+      $("body").addClass("modal-open"); //this stop scroll when looking at a project
+    }
   });
 
   //when clicks on X, close the modal
