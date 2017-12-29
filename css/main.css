@@ -1,8 +1,13 @@
+/*version 3*/
 /*TODO in small screens the portafolio link in the burger get you 1px lower than it should*/
 /*TODO finish the gallery*/
-/*TODO apply color palette*/
-
-@import 'normalize.css';
+/*TODO remove bootstrap*/
+/*TODO maquetar y desarrollar email*/
+/*TODO maquetar y migrar landings*/
+/*TODO put roles everywhere and other accessibility stuff*/
+/*TODO rename gallery files, more accessible*/
+/*TODO fix gallery titles in smaller screens*/
+/*#5F4B8B #1A535C #222222 #4ECDC4 #F7FFF7 #FF6B6B #FFE66D*/
 
 html{
   height: 100%;
@@ -10,6 +15,10 @@ html{
 body{
   height: 100%;
 	position: relative;
+}
+
+.navbar-fixed-top{
+  border-width: 0 !important;
 }
 
 /*a little less padding in the bar when the screen is small*/
@@ -24,45 +33,176 @@ a.navbar-brand{
 	font-variant: small-caps;
   line-height: 18px;
   padding-right: 0;
+  color: #F7FFF7;
+}
+a.navbar-brand:hover{
+  color: #F7FFF7;
+  text-shadow: 0 0 2px #F7FFF7, 0 0 4px #F7FFF7;
 }
 
-/*navigation bar when the screen is medium*/
+/*for small screens(?)*/
+.parallax{
+  background-attachment:scroll;
+  background-image: url(../images/extra/bg2.jpg);
+}
+
+/*menu buttons:hover*/
+ul.shrink>li>a{
+  color: #F7FFF7;
+}
+.nav>li>a:hover{
+  color: #4ECDC4 !important;
+  background-color: #F7FFF7 !important;
+}
+.navbar-collapse a{
+  color: #4ECDC4;
+}
+
+.navbar-nav > .active > a,
+.navbar-nav > .active > a:hover{
+  color: #4ECDC4;
+  background-color: #F7FFF7;
+}
+
+/*--------------------------for small screens-------------------------*/
+@media only screen and (max-width: 410px){
+  nav.navbar{
+    background-color: #4ECDC4;
+  }
+  header .img-resp{
+    margin:0 auto 22px;
+    max-width: 90%;
+  }
+  /*my-name when the screen is small*/
+  #intro-text{
+    line-height: 1.24;
+  }
+  #my-name{
+    font-size: 3em;
+  }
+  hr#intro-line{
+    margin:10px auto 15px;
+  }
+  /*when the screen is small*/
+  div#perfil-h1, div#portafolio-h1, div#contacto-h1{
+    font-size: 3em;
+  }
+  #contact-form{
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  #caption h1{
+    font-size: 1em;
+  }
+}/*media query*/
+
+/*-----------------when the screen is small or medium----------------*/
+@media only screen and (max-width: 768px){
+  .navbar-collapse a{
+    color: #F7FFF7;
+  }
+  a.navbar-brand:hover{
+    text-shadow: 0 0 2px #F7FFF7, 0 0 4px #F7FFF7;
+  }
+  #gmap{
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}/*media query*/
+
+/*----------------------when the screen is medium---------------------*/
 @media only screen and (min-width: 410px){
+  /*navigation bar*/
+  nav.navbar{
+    background-color: #4ECDC4;
+  }
   a.navbar-brand{
     font-size: 20px;
+    color: #F7FFF7;
   }
-}
+  /*div.container when the screen is medium*/
+  header .container{
+    padding-bottom: 0;
+    padding-top:110px;
+  }
+  header.parallax{
+    background-attachment: fixed;
+    background-image: url(../images/extra/bg1.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 85%;
+  }
+  #gmap{
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  #caption h1{
+    font-size: 1.4em;
+  }
+}/*media query*/
 
-/*navigation bar when the screen is big*/
+/*-----------------------when the screen is big----------------------*/
 @media only screen and (min-width: 768px){
+  /*navigation bar*/
   div.container-fluid{
     padding-left: 25px;
     padding-right: 25px;
   }
-  nav.navbar{
-    background-color: transparent;
-    border-bottom-color: transparent;
-  }
   a.navbar-brand{
+    color: #4ECDC4;
     font-size: 24px;
   }
+  a.navbar-brand:hover{
+    text-shadow: 0 0 2px #4ECDC4, 0 0 4px #4ECDC4;
+    color: #4ECDC4;
+  }
   a.navbar-brand.shrink{
+    color: #F7FFF7;
     font-size: 20px;
+  }
+  a.navbar-brand.shrink:hover{
+    text-shadow: 0 0 2px #F7FFF7, 0 0 4px #F7FFF7;
   }
   #my-navbar{
     font-size: 18px;
   }
-}
-/*chequear!*/
-.navbar-collapse{
-  border-top: 1px solid #f3ffbd !important;
-  box-shadow: none !important;
+  nav.navbar{
+    background-color: transparent;
+  }
+  .navbar-collapse.collapse{
+    border-top: 0 !important;
+  }
+  /*div.container when the screen is big*/
+  header .container{
+    padding-bottom: 0;
+    padding-top:150px;
+  }
+  #boton-subir{
+    display: none;
+  }
+  #caption h1{
+    font-size: 2em;
+  }
+} /*media query*/
+
+/*-----------------------when the screen is bigger-------------------*/
+@media only screen and (max-width: 991px){
+  form{
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+} /*media query*/
+
+.navbar-collapse.collapse{
+  border-top: 1px solid #F7FFF7;
+  /*box-shadow: none;*//*???*/
 }
 
 /*this happens when you scroll*/
 nav.shrink{
-  background-color: #ff1654;
-  opacity: 1;
+  background-color: #4ECDC4;
+  opacity: 1;/*?*/
 }
 .shrink#my-navbar{
   font-size: 14px;
@@ -70,21 +210,25 @@ nav.shrink{
 
 /*hamburger button*/
 .glyphicon{
-  color:#9d9d9d;
+  color: #F7FFF7;
 }
-
 /*this happens to the hamburger when the screen get too small*/
 #overrides .navbar-toggle{
-  border-color: #777;
+  border-color: #F7FFF7;
   margin-bottom: 5px;
   margin-top: 5px;
+}
+#overrides .navbar-toggle:hover,
+#overrides .navbar-toggle:focus{
+  background-color: #98E2DD;
 }
 
 /* intro: image + short bio*/
 header{
+  padding-bottom: 50px;
   position: relative;
-	text-align:center;
-    z-index: 100;
+	text-align: center;
+  z-index: 100;
 }
 
 .img-resp{
@@ -96,35 +240,16 @@ header{
 header img{
 	margin:0 auto 40px;
 }
-/*when the screen is small*/
-@media only screen and (max-width: 410px){
-  header .img-resp{
-    margin:0 auto 22px;
-    max-width: 90%;
-  }
-}
 
 /*intro's div.container*/
 header .container{
   padding-bottom: 10px;
 	padding-top:75px;
 }
-/*div.container when the screen is medium*/
-@media only screen and (min-width: 410px){
-  header .container{
-    padding-bottom: 0;
-    padding-top:110px;
-  }
-}
-/*div.container when the screen is big*/
-@media only screen and (min-width: 768px){
-  header .container{
-    padding-bottom: 0;
-    padding-top:150px;
-  }
-}
+
+
 #intro-text {
-  color:#f3ffbd;
+  color:#F7FFF7;
 }
 
 #my-name{
@@ -132,18 +257,7 @@ header .container{
   font-size: 4em;
 	font-weight: 900;
 }
-/*my-name when the screen is small*/
-@media only screen and (max-width: 410px){
-  #intro-text{
-    line-height: 1.24;
-  }
-  #my-name{
-    font-size: 3em;
-  }
-  hr#intro-line{
-    margin:10px auto 15px;
-  }
-}
+
 #intro-line{
 	border:solid 4px;
   margin:25px auto 30px;
@@ -157,7 +271,8 @@ header .container{
 
 /*every section: portafolio, perfil, contacto*/
 section{
-  background-color: #b2dbbf;
+  background: #FFE66D; /* For browsers that do not support gradients */
+  background: linear-gradient(to right, #FFE66D, #ffd05b);
   display:block;
   margin-top: -50px;
   position: relative;
@@ -167,8 +282,10 @@ section{
   padding-right:0;
 }
 
+
+
 #perfil{/*display:block;*/
-  color: #247ba0;
+  color: #FF6B6B;
   padding-bottom: 50px;
   padding-top: 50px;
   text-align: center;
@@ -182,16 +299,11 @@ section{
   margin-top: 75px;
 }
 #perfil-h1 span{
-  border-bottom: 10px solid #247ba0;
+  border-bottom: 10px solid #FF6B6B;
 }
-/*perfil-h1 when the screen is small*/
-@media only screen and (max-width: 410px){
-  #perfil-h1{
-    font-size: 3em;
-  }
-}
+
 .skills{
-  background-color: #70c1b3;
+  background-color: #F7FFF7;
   border-radius: 20px;
   display: inline-block;
   height: 40px;
@@ -202,13 +314,16 @@ section{
   text-align: center;
 }
 
+
+
 #portafolio{
-  background-color: #f3ffbd;
+  background: #F7FFF7; /* For browsers that do not support gradients */
+  background: linear-gradient(to right, #F7FFF7, #e5fffb);
   padding-top: 100px;
   z-index: 60;
 }
 #portafolio-h1{
-  color: #ff1654;
+  color: #4ECDC4;
   margin-bottom: 60px;
   padding-top: 25px;
   font-family: 'Roboto', sans-serif;
@@ -217,17 +332,17 @@ section{
   text-align: center;
 }
 #portafolio-h1 span{
-  border-bottom: 10px solid #ff1654;
+  border-bottom: 10px solid #4ECDC4;
 }
 
+
+
 #contacto{
-	display:block;
-	height: 500px;
+  padding-bottom: 50px;
   padding-top: 100px;
-  z-index: 40;
 }
 #contacto-h1{
-  color: #247ba0;
+  color: #FF6B6B;
   margin-bottom: 60px;
   padding-top: 25px;
   font-family: 'Roboto', sans-serif;
@@ -236,29 +351,62 @@ section{
   text-align: center;
 }
 #contacto-h1 span{
-  border-bottom: 10px solid #247ba0;
+  border-bottom: 10px solid #FF6B6B;
 }
+
+
+/* form */
+
 
 footer{
-  background-color: #f3ffbd;
-  height: 500px;
+  background: #222222; /* For browsers that do not support gradients */
+  background: linear-gradient(to right, #222222, #161616);
+  padding-top: 50px;
+  z-index: 20;
 }
-
-/*for small screens*/
-.parallax{
-  background-attachment:scroll;
-  background-image: url(../images/extra/bg2.jpg);
+footer h3{
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-top: 30px;
 }
-/*for big screens*/
-@media only screen and (min-width: 411px){
-  header.parallax{
-    background-attachment: fixed;
-    background-image: url(../images/extra/bg1.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 85%;
+#redes, #gmap{
+  color: #F7FFF7;
+  text-align: center;
+}
+#redes{
+  padding-top: 40px;
+}
+@media only screen and (min-width: 992px) {
+  #redes{
+    padding-top: 0;
   }
+}
+.red{
+  display: inline-block;
+  margin: 10px;
+  width: 150px;
+}
+.red a{
+  color: #F7FFF7;
+}
+.red a:hover,
+.red a:focus{
+  color: #4ECDC4;
+}
+.red-container{
+  list-style: none;
+  padding: 0;
+}
+#map{
+  height: 350px;
+  border-radius: 4px;
+  margin-top: 30px;
+}
+#credit{
+  color: #666;
+  text-align: center;
+  height: 50px;
+  line-height: 88px;
 }
 
 .port-cover{
@@ -273,8 +421,9 @@ footer{
   width: 100%;
   z-index: 2;
 }
+
 .port-cover span{
-  color: white;
+  color: #F7FFF7;
   margin-top: -34px;
   pointer-events: none;
   position: absolute;
@@ -293,27 +442,33 @@ footer{
   height: 100%;
   left: 0;
   overflow: auto;
-  padding-top: 57px;
+  padding-top: 32px;
   position:fixed;
   top: 0;
   width: 100%;
-  z-index: 1;
 }
 .modal-content{
+  background-color: black; /*to fix image's corners with weird pixels*/
   display:block;
-  margin:auto;
+  margin: 25px auto;
   max-width: 800px;
   width:100%;
 }
 #caption{
-  color: #fff;
+  color: #F7FFF7;
   display: block;
-  height: 150px;
+
   margin:auto;
   max-width: 800px;
   padding:10px 0;
-  text-align: center;
+}
+#caption h1{
+  margin:15px auto;
   width: 80%;
+}
+#caption h1:first-child {
+  color: #4ECDC4;
+  text-align: center;
 }
 
 .modal-content,
@@ -333,22 +488,47 @@ footer{
 }
 
 .close-modal{
-  color: #fff;
+  text-shadow: 1px 2px 4px black;
+  color: #F7FFF7;
   font-size: 40px;
   font-weight: bold;
-  position: absolute;
+  line-height: 20px;
+  position: fixed;
   right: 30px;
-  top: 0;
+  top: 18px;
   transition: 0.3s;
+  z-index: 140;
 }
-.close-modal:hover,
-.close-modal:focus{
-  color: #9d9d9d;
+.close-modal:hover{
+  color: #4ECDC4;
   cursor: pointer;
   text-decoration: none;
 }
-@media only screen and (min-width: 768px){
-  .modal-content{
-    width: 80%;
-  }
+.text-muted{
+  display: inline-block;
+  vertical-align: text-top;
+  margin: 0;
+}
+label{
+  text-transform: uppercase;
+}
+
+
+#boton-subir{
+  background-color: #45c6be; /*a bit darker because opacity*/
+  border-radius: 50%;
+  bottom: 35px;
+  box-shadow: 1px 2px 4px black;
+  cursor: pointer;
+  height: 50px;
+  line-height: 48px;
+  opacity: 0.8;
+  position: fixed;
+  right: 25px;
+  text-align: center;
+  width: 50px;
+  z-index: 120;
+}
+#boton-subir a{
+  color: #F7FFF7;
 }
