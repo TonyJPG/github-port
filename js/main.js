@@ -58,7 +58,7 @@ $(document).ready(function () {
   //when you click a gallery's elem
   $(".port-cover").click(function(){
     if ($(this).hasClass("is-video")){ //if elem is video
-      $(".modal").append("<video class='modal-content' controls><source type='video/mp4'>Video not working.</video>");
+      $(".modal").append("<video class='modal-content' controls>Video not working.</video>");
     } else { //if elem is image
       $(".modal").append("<img class='modal-content'>");
     }
