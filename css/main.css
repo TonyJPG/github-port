@@ -6,6 +6,7 @@
 /*TODO maquetar y migrar landings*/
 /*TODO put roles everywhere and other accessibility stuff*/
 /*TODO rename gallery files, more accessible*/
+/*TODO fix gallery titles in smaller screens*/
 /*#5F4B8B #1A535C #222222 #4ECDC4 #F7FFF7 #FF6B6B #FFE66D*/
 
 html{
@@ -90,6 +91,9 @@ ul.shrink>li>a{
     padding-left: 40px;
     padding-right: 40px;
   }
+  #caption h1{
+    font-size: 1em;
+  }
 }/*media query*/
 
 /*-----------------when the screen is small or medium----------------*/
@@ -133,6 +137,9 @@ ul.shrink>li>a{
     padding-left: 40px;
     padding-right: 40px;
   }
+  #caption h1{
+    font-size: 1.4em;
+  }
 }/*media query*/
 
 /*-----------------------when the screen is big----------------------*/
@@ -171,11 +178,11 @@ ul.shrink>li>a{
     padding-bottom: 0;
     padding-top:150px;
   }
-  .modal-content{
-    width: 80%;
-  }
   #boton-subir{
     display: none;
+  }
+  #caption h1{
+    font-size: 2em;
   }
 } /*media query*/
 
@@ -185,7 +192,7 @@ ul.shrink>li>a{
     padding-left: 80px;
     padding-right: 80px;
   }
-}
+} /*media query*/
 
 .navbar-collapse.collapse{
   border-top: 1px solid #F7FFF7;
@@ -382,6 +389,10 @@ footer h3{
 .red a{
   color: #F7FFF7;
 }
+.red a:hover,
+.red a:focus{
+  color: #4ECDC4;
+}
 .red-container{
   list-style: none;
   padding: 0;
@@ -431,26 +442,33 @@ footer h3{
   height: 100%;
   left: 0;
   overflow: auto;
-  padding-top: 57px;
+  padding-top: 32px;
   position:fixed;
   top: 0;
   width: 100%;
 }
 .modal-content{
+  background-color: black; /*to fix image's corners with weird pixels*/
   display:block;
-  margin:auto;
+  margin: 25px auto;
   max-width: 800px;
   width:100%;
 }
 #caption{
   color: #F7FFF7;
   display: block;
-  height: 150px;
+
   margin:auto;
   max-width: 800px;
   padding:10px 0;
-  text-align: center;
+}
+#caption h1{
+  margin:15px auto;
   width: 80%;
+}
+#caption h1:first-child {
+  color: #4ECDC4;
+  text-align: center;
 }
 
 .modal-content,
@@ -470,16 +488,19 @@ footer h3{
 }
 
 .close-modal{
+  text-shadow: 1px 2px 4px black;
   color: #F7FFF7;
   font-size: 40px;
   font-weight: bold;
-  position: absolute;
+  line-height: 20px;
+  position: fixed;
   right: 30px;
-  top: 0;
+  top: 18px;
   transition: 0.3s;
+  z-index: 140;
 }
 .close-modal:hover{
-  color: #9d9d9d;
+  color: #4ECDC4;
   cursor: pointer;
   text-decoration: none;
 }
@@ -494,7 +515,7 @@ label{
 
 
 #boton-subir{
-  background-color: #38BCB3; /*a bit darker because opacity*/
+  background-color: #45c6be; /*a bit darker because opacity*/
   border-radius: 50%;
   bottom: 35px;
   box-shadow: 1px 2px 4px black;
