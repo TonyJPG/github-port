@@ -1,4 +1,4 @@
-/*version 3*/
+/*version 4*/
 /*global $, document, window, console*/
 
 //google map script
