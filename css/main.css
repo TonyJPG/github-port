@@ -6,7 +6,7 @@
 /*TODO maquetar y migrar landings*/
 /*TODO put roles everywhere and other accessibility stuff*/
 /*TODO rename gallery files, more accessible*/
-/*TODO fix gallery titles in smaller screens*/
+/*TODO menu scrolls the page 1px off*/
 /*#5F4B8B #1A535C #222222 #4ECDC4 #F7FFF7 #FF6B6B #FFE66D*/
 
 html{
@@ -18,7 +18,7 @@ body{
 }
 
 .navbar-fixed-top{
-  border-width: 0 !important;
+  border: none !important;
 }
 
 /*a little less padding in the bar when the screen is small*/
@@ -450,17 +450,16 @@ footer h3{
 .modal-content{
   background-color: black; /*to fix image's corners with weird pixels*/
   display:block;
-  margin: 25px auto;
+  margin: 25px auto 40px;
   max-width: 800px;
   width:100%;
 }
 #caption{
   color: #F7FFF7;
   display: block;
-
   margin:auto;
   max-width: 800px;
-  padding:10px 0;
+  padding: 0 0 10px 0;
 }
 #caption h1{
   margin:15px auto;
