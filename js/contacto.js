@@ -3,6 +3,14 @@ $(function() {
   $('#contact-form').validator();
   $('#contact-form').on('submit', function(e) {
     if (!e.isDefaultPrevented()) {
+
+      //event added to the dataLayer to fire a trigger in GTM
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({
+        event: 'formSubmissionSuccessful',
+        formID: 'contact-form'
+      });
+
       var url = '../php/contacto.php';
       $.ajax({
         type: "POST",
@@ -19,6 +27,9 @@ $(function() {
         }
       });
       return false; //this return fix the double email and stuff
+    } else {
+      //This happens when the form's submit fails
+      
     }
   })
 });
