@@ -1,4 +1,4 @@
-/* version 8/10/18 */
+/* version 17/10/19 */
 /*TODO remove bootstrap*/
 /*TODO in small screens the portafolio link in the burger get you 1px lower than it should*/
 /*TODO menu scrolls the page 1px off*/
@@ -94,11 +94,6 @@ ul.shrink>li>a {
     /*when the screen is small*/
     div#perfil-h1, div#portafolio-h1, div#contacto-h1 {
         font-size: 3em;
-    }
-
-    #contact-form {
-        padding-left: 40px;
-        padding-right: 40px;
     }
 
     #caption h1 {
@@ -212,14 +207,6 @@ ul.shrink>li>a {
 
     #caption h1 {
         font-size: 2em;
-    }
-} /*media query*/
-
-/*-----------------------when the screen is bigger-------------------*/
-@media only screen and (max-width: 991px) {
-    form {
-        padding-left: 80px;
-        padding-right: 80px;
     }
 } /*media query*/
 
@@ -386,29 +373,10 @@ section {
     border-radius: 10px;
 }
 
-#contacto {
-    padding-bottom: 50px;
-    padding-top: 100px;
-    z-index: 1;
-}
-
-#contacto-h1 {
-    color: #4ECDC4; /*#FF6B6B*/
-    margin-bottom: 60px;
-    padding-top: 25px;
-    font-family: 'Roboto', sans-serif;
-    font-size: 4em;
-    font-weight: 900;
-    text-align: center;
-}
-
-#contacto-h1 span {
-    border-bottom: 10px solid #4ECDC4;
-}
-
-/* form */
 footer {
-    padding-top: 50px;
+    padding-top: 100px;
+    padding-bottom: 30px;
+    margin-top: -50px;
     z-index: 20;
 }
 footer::before {
@@ -469,8 +437,13 @@ footer h3 {
 
 #map {
     height: 350px;
-    border-radius: 4px;
     margin-top: 30px;
+}
+
+#map > iframe{
+    height:100%;
+    width:100%;
+    border-radius: 4px;
 }
 
 #credit {
@@ -627,8 +600,7 @@ label {
     color: #F7FFF7;
 }
 
-#particles-js,
-#particles-js2 {
+#particles-js {
     position: absolute;
     top: 0;
     left: 0;

@@ -1,17 +1,5 @@
-/* version 8/10/18 */
+/* version 17/10/19 */
 /*global $, document, window, console*/
-
-//google map script
-function initMap() {
-    var map = new google.maps.Map(document.getElementById('map'), {
-        zoom: 14,
-        center: {
-            lat: 40.414,
-            lng: -3.675
-        },
-        mapTypeId: google.maps.MapTypeId.ROADMAP
-    })
-}
 
 //function to close dropdown menu when it's open
 function closeTheMenu() {
@@ -212,4 +200,3 @@ const particlesObj = {
     "retina_detect": true
 };
 particlesJS("particles-js", particlesObj);
-particlesJS("particles-js2", particlesObj);
